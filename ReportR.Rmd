@@ -1,0 +1,254 @@
+---
+title: "Final Report: Test of `r params$test_article` Using `r params$assay_name`"
+author: "`r params$author`"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    toc: true
+  word_document: 
+    toc: true
+  pdf_document: 
+    toc: true
+editor_options: 
+  markdown: 
+    wrap: 72
+params:
+  test_article: "Hygenix Mask"
+  assay_name: "MEM Elution"
+  author: "Dr. John Doe"
+  report_number: "HYX-M202309045(A)"
+  glp_regulation: "21 CFR Part 58, U.S. FDA"
+  protocol_inspection_date: "2024-09-10"
+  procedure_inspection_date: "2024-09-12"
+  raw_data_inspection_date: "2024-09-20"
+  final_report_inspection_date: "2024-09-21"
+  client_name: "Hygenix Inc."
+  client_address: "300 Main Street, Springfield, USA"
+  facility_name: "BioTech Labs"
+  facility_address: "123 Research Ave, BioCity, USA"
+  facility_website: "www.biotechlabs.com"
+  facility_contact: "contact@biotechlabs.com, +1-800-555-1234"
+  batch_number: "HYX-202305001"
+  physical_state: "Solid"
+  color: "Blue"
+  size: "180 x 95 mm"
+  storage_conditions: "Room temperature"
+  intended_use: "To provide respiratory protection in medical settings by filtering particulate matter."
+  negative_control_name: "Polyethylene Pellets"
+  negative_control_color: "White"
+  negative_control_physical_state: "Solid"
+  negative_control_extraction_ratio: "3 cm²/mL"
+  positive_control_name: "PVC Plastic"
+  positive_control_color: "Clear"
+  positive_control_physical_state: "Solid"
+  positive_control_extraction_ratio: "3 cm²/mL"
+  media_control: "MEM medium with 10% FBS"
+  cell_line_name: "HeLa Cells"
+  cell_line_source: "ATCC (American Type Culture Collection), USA"
+  extraction_solvent: "MEM medium with 10% fetal bovine serum (FBS)"
+  extraction_temp: "37°C"
+  extraction_time: "72 hours"
+  surface_area_volume_ratio: "3 cm²/mL"
+  exposure_duration: "48 hours"
+  concentration_levels: c("100%", "75%", "50%", "25%")
+  endpoint: "Qualitative Scoring"
+  deviation_statement: "No deviations from the approved study protocol were observed that would affect the validity of the data."
+---
+
+```{r, results="asis", echo=FALSE}
+if (knitr::is_latex_output()) {
+  cat("\\newpage")
+} else if (knitr::is_html_output()) {
+  cat('<div style="page-break-after: always;"></div>')
+} else if (knitr::pandoc_to("docx")) {
+  cat('<w:br />')
+}
+```
+
+## 1. Report Information
+
+**Report Number:** `r params$report_number`\
+**Test Method:** `r params$assay_name`\
+**Standard:** `r params$glp_regulation`\
+**Sponsor:** `r params$client_name`\
+**Address:** `r params$client_address`\
+**Testing Facility:** `r params$facility_name`\
+**Facility Address:** `r params$facility_address`\
+**Website:** `r params$facility_website`\
+**Contact Information:** `r params$facility_contact`
+
+------------------------------------------------------------------------
+
+```{r, results="asis", echo=FALSE}
+if (knitr::is_latex_output()) {
+  cat("\\newpage")
+} else if (knitr::is_html_output()) {
+  cat('<div style="page-break-after: always;"></div>')
+} else if (knitr::pandoc_to("docx")) {
+  cat('<w:br />')
+}
+```
+
+## 2. Quality Assurance Statement
+
+The Quality Assurance Unit inspected/audited this study in compliance
+with the following GLP (Good Laboratory Practice) regulations:
+
+-   **GLP Regulation:** `r params$glp_regulation`\
+    The inspections were conducted on the following dates, and the
+    findings were reported to the Study Director and Testing Facility
+    Management:
+
+-   **Study Protocol Inspection Date:**
+    `r params$protocol_inspection_date`\
+
+-   **Study Procedure Inspection Date:**
+    `r params$procedure_inspection_date`\
+
+-   **Raw Data Inspection Date:** `r params$raw_data_inspection_date`\
+
+-   **Final Report Inspection Date:**
+    `r params$final_report_inspection_date`
+
+The final report accurately describes the test methods, and the results
+are consistent with the raw data.
+
+------------------------------------------------------------------------
+
+```{r, results="asis", echo=FALSE}
+if (knitr::is_latex_output()) {
+  cat("\\newpage")
+} else if (knitr::is_html_output()) {
+  cat('<div style="page-break-after: always;"></div>')
+} else if (knitr::pandoc_to("docx")) {
+  cat('<w:br />')
+}
+```
+
+## 3. Test and Control Articles
+
+### 3.1 Test Article
+
+-   **Name:** `r params$test_article`\
+-   **Manufacturer:** `r params$client_name`\
+-   **Batch/Lot Number:** `r params$batch_number`\
+-   **Physical State:** `r params$physical_state`\
+-   **Color:** `r params$color`\
+-   **Size:** `r params$size`\
+-   **Storage Conditions:** `r params$storage_conditions`\
+-   **Intended Use:** `r params$intended_use`
+
+### 3.2 Negative Control Article
+
+-   **Name:** `r params$negative_control_name`\
+-   **Extraction Ratio:** `r params$negative_control_extraction_ratio`\
+-   **Physical State:** `r params$negative_control_physical_state`\
+-   **Color:** `r params$negative_control_color`\
+-   **Storage Conditions:** Room temperature\
+-   **Extraction Solvent:** MEM medium with 10% fetal bovine serum
+    (FBS).
+
+### 3.3 Positive Control Article
+
+-   **Name:** `r params$positive_control_name`\
+-   **Extraction Ratio:** `r params$positive_control_extraction_ratio`\
+-   **Physical State:** `r params$positive_control_physical_state`\
+-   **Color:** `r params$positive_control_color`\
+-   **Extraction Solvent:** MEM medium with 10% FBS.
+
+### 3.4 Media Control
+
+-   **Name:** `r params$media_control`
+
+------------------------------------------------------------------------
+
+## 4. Pre and Post Extract Appearance
+
+-   **Pre-Extract Appearance:** Clear and free of particulates.\
+-   **Post-Extract Appearance:** No significant color changes were noted
+    for both the test article and controls.
+
+------------------------------------------------------------------------
+
+## 5. Test System
+
+### 5.1 Cell Line
+
+-   **Name:** `r params$cell_line_name`, obtained from
+    `r params$cell_line_source`.\
+-   **Justification:** `r params$cell_line_name` cells are widely used
+    for cytotoxicity studies due to their sensitivity to cytotoxic
+    extracts.
+
+------------------------------------------------------------------------
+
+## 6. Experimental Design
+
+### 6.1 Preparation of Extracts
+
+-   **Extraction Solvent:** `r params$extraction_solvent`.\
+-   **Extraction Conditions:**
+    -   The test article was extracted at a surface area-to-volume ratio
+        of `r params$surface_area_volume_ratio` at
+        `r params$extraction_temp` for `r params$extraction_time`.
+
+### 6.2 Procedure
+
+-   Following extraction, the cells were exposed to the test article
+    extract, as well as the positive and negative control extracts, and
+    the media control for `r params$exposure_duration`.\
+-   The test article extract was prepared at concentrations of
+    `r paste(params$concentration_levels, collapse = ", ")`.\
+-   The cells were incubated for 24 hours, after which cytotoxicity was
+    assessed by the percentage of cell viability using the MTT assay.\
+-   Cell morphology was observed to evaluate any changes that could
+    indicate cytotoxicity.
+
+------------------------------------------------------------------------
+
+```{r, results="asis", echo=FALSE}
+if (knitr::is_latex_output()) {
+  cat("\\newpage")
+} else if (knitr::is_html_output()) {
+  cat('<div style="page-break-after: always;"></div>')
+} else if (knitr::pandoc_to("docx")) {
+  cat('<w:br />')
+}
+```
+
+## 7. Results
+
+### 7.1 Acceptance Criteria
+
+| Grade        | Criteria                                                                              |
+|-------------------|-----------------------------------------------------|
+| 0 - None     | No cell lysis observed; intracytoplasmic granules present.                            |
+| 1 - Slight   | Less than or equal to 20% rounding of cells with occasional lysed cells.              |
+| 2 - Mild     | Greater than 20% to less than or equal to 50% rounding, with no extensive cell lysis. |
+| 3 - Moderate | Greater than 50% rounding with lysed cells.                                           |
+| 4 - Severe   | Nearly complete destruction of the cell layers.                                       |
+
+The mean reactivity score of the three replicates will be reported using
+`r params$endpoint`.
+
+------------------------------------------------------------------------
+
+## 9. Record Storage
+
+All raw data and a copy of the final report will be retained in the
+designated archive.
+
+------------------------------------------------------------------------
+
+## 10. Confidentiality Agreement
+
+All confidentiality statements were agreed upon before the initiation of
+the study.
+
+------------------------------------------------------------------------
+
+## 12. Deviation Statement
+
+`r params$deviation_statement`
+
+------------------------------------------------------------------------
