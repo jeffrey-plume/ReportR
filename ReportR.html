@@ -9,11 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Dr. John Doe" />
 
 <meta name="date" content="2024-09-22" />
 
-<title>Final Report: Test of Hygenix Mask Using MEM Elution</title>
+<title>ISO 10993-5 MEM Elution Test Report</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -251,6 +250,16 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+p.abstract{
+text-align: center;
+font-weight: bold;
+}
+div.abstract{
+margin: auto;
+width: 90%;
+}
+</style>
 
 
 
@@ -350,286 +359,924 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Final Report: Test of Hygenix Mask Using
-MEM Elution</h1>
-<h4 class="author">Dr. John Doe</h4>
-<h4 class="date">2024-09-22</h4>
+<h1 class="title toc-ignore">ISO 10993-5 MEM Elution Test Report</h1>
+<h3 class="subtitle">Assessment of Dehydrated Boulders</h3>
+<h4 class="author"><p>Wile E. Coyote<br />
+ACME Corporation<br />
+123 Research Ave<br />
+Burbank, CA, 91501<br />
+USA Prepared by:<br />
+Test Facility:<br />
+</p></h4>
+<h4 class="date">September 22, 2024</h4>
+<div class="abstract">
+<p class="abstract">Abstract</p>
+<p>This report summarizes the results of the MEM Elution assay for the
+cytotoxicity testing of Dehydrated Boulders. The purpose of this test is
+to assess the cytotoxic potential of the test article to determine if
+the material exhibits any toxic effects on mammalian cells.</p>
+</div>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#report-information" id="toc-report-information">1. Report
-Information</a></li>
-<li><a href="#quality-assurance-statement" id="toc-quality-assurance-statement">2. Quality Assurance
+<li><a href="#quality-assurance-statement" id="toc-quality-assurance-statement">Quality Assurance
 Statement</a></li>
-<li><a href="#test-and-control-articles" id="toc-test-and-control-articles">3. Test and Control Articles</a>
+<li><a href="#inspections-overview" id="toc-inspections-overview">Inspections Overview</a></li>
+<li><a href="#glp-compliance-statement" id="toc-glp-compliance-statement">GLP Compliance Statement</a></li>
+<li><a href="#summary" id="toc-summary">Summary</a>
 <ul>
-<li><a href="#test-article" id="toc-test-article">3.1 Test
-Article</a></li>
-<li><a href="#negative-control-article" id="toc-negative-control-article">3.2 Negative Control Article</a></li>
-<li><a href="#positive-control-article" id="toc-positive-control-article">3.3 Positive Control Article</a></li>
-<li><a href="#media-control" id="toc-media-control">3.4 Media
+<li><a href="#test-and-control-articles" id="toc-test-and-control-articles">Test and Control Articles</a></li>
+<li><a href="#test-method" id="toc-test-method">Test Method</a></li>
+<li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
+</ul></li>
+<li><a href="#purpose" id="toc-purpose">Purpose</a></li>
+<li><a href="#regulatory-standards" id="toc-regulatory-standards">Regulatory Standards</a></li>
+<li><a href="#compliance" id="toc-compliance">Compliance</a></li>
+<li><a href="#test-and-control-articles-1" id="toc-test-and-control-articles-1">Test and Control Articles</a>
+<ul>
+<li><a href="#test-article" id="toc-test-article">Test Article</a></li>
+<li><a href="#negative-control-article" id="toc-negative-control-article">Negative Control Article</a></li>
+<li><a href="#positive-control-article" id="toc-positive-control-article">Positive Control Article</a></li>
+<li><a href="#media-control" id="toc-media-control">Media
 Control</a></li>
 </ul></li>
-<li><a href="#pre-and-post-extract-appearance" id="toc-pre-and-post-extract-appearance">4. Pre and Post Extract
-Appearance</a></li>
-<li><a href="#test-system" id="toc-test-system">5. Test System</a>
+<li><a href="#equipment-and-reagents" id="toc-equipment-and-reagents">Equipment and Reagents</a>
 <ul>
-<li><a href="#cell-line" id="toc-cell-line">5.1 Cell Line</a></li>
+<li><a href="#equipment" id="toc-equipment">Equipment</a></li>
+<li><a href="#reagents" id="toc-reagents">Reagents</a></li>
 </ul></li>
-<li><a href="#experimental-design" id="toc-experimental-design">6.
-Experimental Design</a>
+<li><a href="#identification-of-test-system" id="toc-identification-of-test-system">Identification of Test
+System</a></li>
+<li><a href="#justification-of-test-system-and-route-of-administration" id="toc-justification-of-test-system-and-route-of-administration">Justification
+of Test System and Route of Administration</a></li>
+<li><a href="#experimental-design" id="toc-experimental-design">Experimental Design</a>
 <ul>
-<li><a href="#preparation-of-extracts" id="toc-preparation-of-extracts">6.1 Preparation of Extracts</a></li>
-<li><a href="#procedure" id="toc-procedure">6.2 Procedure</a></li>
+<li><a href="#extraction-process" id="toc-extraction-process">Extraction
+Process</a></li>
 </ul></li>
-<li><a href="#results" id="toc-results">7. Results</a>
+<li><a href="#experimental-procedure" id="toc-experimental-procedure">Experimental Procedure</a>
 <ul>
-<li><a href="#acceptance-criteria" id="toc-acceptance-criteria">7.1
-Acceptance Criteria</a></li>
+<li><a href="#evaluation-criteria" id="toc-evaluation-criteria">Evaluation Criteria</a></li>
+<li><a href="#statistical-method" id="toc-statistical-method">Statistical Method</a></li>
 </ul></li>
-<li><a href="#record-storage" id="toc-record-storage">9. Record
+<li><a href="#results" id="toc-results">Results</a>
+<ul>
+<li><a href="#pre-extraction-observations" id="toc-pre-extraction-observations">Pre-Extraction
+Observations</a></li>
+<li><a href="#post-extraction-observations" id="toc-post-extraction-observations">Post-Extraction
+Observations</a></li>
+<li><a href="#morphological-scoring" id="toc-morphological-scoring">Morphological Scoring</a></li>
+</ul></li>
+<li><a href="#conclusion-1" id="toc-conclusion-1">Conclusion</a></li>
+<li><a href="#record-storage" id="toc-record-storage">Record
 Storage</a></li>
-<li><a href="#confidentiality-agreement" id="toc-confidentiality-agreement">10. Confidentiality
-Agreement</a></li>
-<li><a href="#deviation-statement" id="toc-deviation-statement">12.
-Deviation Statement</a></li>
+<li><a href="#confidentiality-agreement" id="toc-confidentiality-agreement">Confidentiality Agreement</a></li>
+<li><a href="#deviation-statement" id="toc-deviation-statement">Deviation Statement</a></li>
 </ul>
 </div>
 
 <div style="page-break-after: always;">
 
-</div>
-<div id="report-information" class="section level2">
-<h2>1. Report Information</h2>
-<p><strong>Report Number:</strong> HYX-M202309045(A)<br />
-<strong>Test Method:</strong> MEM Elution<br />
-<strong>Standard:</strong> 21 CFR Part 58, U.S. FDA<br />
-<strong>Sponsor:</strong> Hygenix Inc.<br />
-<strong>Address:</strong> 300 Main Street, Springfield, USA<br />
-<strong>Testing Facility:</strong> BioTech Labs<br />
-<strong>Facility Address:</strong> 123 Research Ave, BioCity, USA<br />
-<strong>Website:</strong> www.biotechlabs.com<br />
-<strong>Contact Information:</strong> <a href="mailto:contact@biotechlabs.com" class="email">contact@biotechlabs.com</a>, +1-800-555-1234</p>
-<hr />
-<div style="page-break-after: always;">
-
-</div>
 </div>
 <div id="quality-assurance-statement" class="section level2">
-<h2>2. Quality Assurance Statement</h2>
+<h2>Quality Assurance Statement</h2>
 <p>The Quality Assurance Unit inspected/audited this study in compliance
-with the following GLP (Good Laboratory Practice) regulations:</p>
-<ul>
-<li><p><strong>GLP Regulation:</strong> 21 CFR Part 58, U.S. FDA<br />
-The inspections were conducted on the following dates, and the findings
-were reported to the Study Director and Testing Facility
-Management:</p></li>
-<li><p><strong>Study Protocol Inspection Date:</strong> 2024-09-10<br />
-</p></li>
-<li><p><strong>Study Procedure Inspection Date:</strong>
-2024-09-12<br />
-</p></li>
-<li><p><strong>Raw Data Inspection Date:</strong> 2024-09-20<br />
-</p></li>
-<li><p><strong>Final Report Inspection Date:</strong>
-2024-09-21</p></li>
-</ul>
-<p>The final report accurately describes the test methods, and the
-results are consistent with the raw data.</p>
-<hr />
+with the following regulations:</p>
+<p><strong>Good Laboratory Practice for Nonclinical Laboratory Studies,
+Title 21 of the Code of Federal Regulations, Part 58 (21 CFR Part
+58)</strong></p>
+</div>
+<div id="inspections-overview" class="section level2">
+<h2>Inspections Overview</h2>
+<p>The Quality Assurance Unit conducted inspections on the following
+dates. The findings were reported to the Study Director. The final
+report was reviewed by the Quality Assurance Unit. The final report
+accurately describes the test methods in accordance with standard
+operating procedures, and the results are consistent with raw data from
+non-clinical studies conducted according to the study protocol.</p>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="24%" />
+<col width="24%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Inspection</th>
+<th>Date of Inspection</th>
+<th>Performed by</th>
+<th>Date Reported to Study Director</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study Protocol</td>
+<td>2024-09-07</td>
+<td>Mr. Bugs Bunny</td>
+<td>2024-09-07</td>
+</tr>
+<tr class="even">
+<td>Study Procedure</td>
+<td>2024-09-11</td>
+<td>Mr. Bugs Bunny</td>
+<td>2024-09-07</td>
+</tr>
+<tr class="odd">
+<td>Raw Data</td>
+<td>2024-09-14</td>
+<td>Mr. Bugs Bunny</td>
+<td>2024-09-14</td>
+</tr>
+<tr class="even">
+<td>Final Report</td>
+<td>2024-09-15</td>
+<td>Mr. Bugs Bunny</td>
+<td>2024-09-15</td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse: collapse; border: none; width: 100%;">
+<tr>
+<td style="border: none; width: 50%;">
+</td>
+<td style="border: none; width: 50%;">
+</td>
+</tr>
+<tr>
+<td style="border: none; height: 40px;">
+ 
+</td>
+<!-- Extra space above the signature lines -->
+<td style="border: none; height: 40px;">
+ 
+</td>
+<!-- Adjust this height as necessary -->
+</tr>
+<tr>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+</tr>
+<tr>
+<td style="border: none;">
+Mr. Bugs Bunny
+</td>
+<td style="border: none;">
+Date
+</td>
+</tr>
+<tr>
+<td style="border: none;">
+Quality Manager
+</td>
+<td style="border: none;">
+</td>
+</tr>
+<tr>
+<td style="border: none; height: 40px;">
+ 
+</td>
+<!-- Extra space for Study Director signature -->
+<td style="border: none; height: 40px;">
+ 
+</td>
+</tr>
+<tr>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+</tr>
+<tr>
+<td style="border: none;">
+Study Director
+</td>
+<td style="border: none;">
+Date
+</td>
+</tr>
+</table>
 <div style="page-break-after: always;">
 
 </div>
 </div>
-<div id="test-and-control-articles" class="section level2">
-<h2>3. Test and Control Articles</h2>
+<div id="glp-compliance-statement" class="section level2">
+<h2>GLP Compliance Statement</h2>
+<p>This study was fully in accordance with the technical requirements of
+the study protocol.</p>
+<p>This study was conducted in compliance with Good Laboratory Practice
+(GLP) Regulation 21 CFR Part 58, U.S. Food and Drug Administration
+(FDA).</p>
+<table>
+<colgroup>
+<col width="42%" />
+<col width="57%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Test Article Receipt</td>
+<td align="right">2024-09-01</td>
+</tr>
+<tr class="even">
+<td>Protocol Effective Date</td>
+<td align="right">2024-09-07</td>
+</tr>
+<tr class="odd">
+<td>Technical Initiation Date</td>
+<td align="right">2024-09-08</td>
+</tr>
+<tr class="even">
+<td>Technical Completion Date</td>
+<td align="right">2024-09-13</td>
+</tr>
+<tr class="odd">
+<td>Final Report Completion Date</td>
+<td align="right">2024-09-15</td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse: collapse; border: none; width: 100%;">
+<tr>
+<td style="border: none; width: 50%;">
+</td>
+<td style="border: none; width: 50%;">
+</td>
+</tr>
+<tr>
+<td style="border: none; height: 40px;">
+ 
+</td>
+<!-- Extra space above the signature lines -->
+<td style="border: none; height: 40px;">
+ 
+</td>
+<!-- Adjust this height as necessary -->
+</tr>
+<tr>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+</tr>
+<tr>
+<td style="border: none;">
+Mr. Bugs Bunny
+</td>
+<td style="border: none;">
+Date
+</td>
+</tr>
+<tr>
+<td style="border: none;">
+Quality Manager
+</td>
+<td style="border: none;">
+</td>
+</tr>
+<tr>
+<td style="border: none; height: 40px;">
+ 
+</td>
+<!-- Extra space for Study Director signature -->
+<td style="border: none; height: 40px;">
+ 
+</td>
+</tr>
+<tr>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+<td style="border: none; width: 50%;">
+______________________
+</td>
+</tr>
+<tr>
+<td style="border: none;">
+Study Director
+</td>
+<td style="border: none;">
+Date
+</td>
+</tr>
+</table>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div id="test-and-control-articles" class="section level3">
+<h3>Test and Control Articles</h3>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Article Type</strong></th>
+<th><strong>Name</strong></th>
+<th><strong>Lot Number</strong></th>
+<th><strong>Expiration</strong></th>
+<th><strong>Storage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test Article</td>
+<td>Dehydrated Boulders</td>
+<td>BB1940WSC</td>
+<td>2025-12-31</td>
+<td>Room temperature</td>
+</tr>
+<tr class="even">
+<td>Negative Control</td>
+<td>Polyethylene Pellets</td>
+<td>POLY-LOT-5678</td>
+<td>2025-03-15</td>
+<td>Room temperature</td>
+</tr>
+<tr class="odd">
+<td>Positive Control</td>
+<td>Latex</td>
+<td>LATEX-LOT-1234</td>
+<td>2025-06-30</td>
+<td>Room temperature</td>
+</tr>
+<tr class="even">
+<td>Blank Control</td>
+<td>N/A</td>
+<td>—</td>
+<td>N/A</td>
+<td>Room temperature</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="test-method" class="section level3">
+<h3>Test Method</h3>
+<p>Potential toxicity of test article was evaluated using the MEM
+Elution method in accordance with ISO 10993-5: 2009 Biological
+evaluation of Medical Devices—Part 5: Tests for in vitro Cytotoxicity.
+Study protocol number: ACME-CYTO</p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>Under the conditions of this study, the test article extract did not
+show cytotoxic potential when testing on L929 cells.</p>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+</div>
+<div id="purpose" class="section level2">
+<h2>Purpose</h2>
+<p>The purpose of this test was to determine the biological reactivity
+of mouse fibroblast L929 cells in response to the test
+article—Dehydrated Boulders. This study evaluated whether the test
+article exhibited any toxic effects on mammalian cells under in vitro
+conditions. Specifically, the test assessed the cytotoxic potential to
+determine the safety and biocompatibility of the material when used
+according to its intended purpose.</p>
+</div>
+<div id="regulatory-standards" class="section level2">
+<h2>Regulatory Standards</h2>
+<p>This study was conducted in accordance with the following regulatory
+standards:</p>
+<ol style="list-style-type: decimal">
+<li><strong>ISO 10993-1</strong>: <em>Evaluation and Testing within a
+Risk Management Process</em>—General requirements for evaluating the
+biological impact of medical devices.<br />
+</li>
+<li><strong>ISO 10993-5:2009</strong>: <em>Biological Evaluation of
+Medical Devices—Part 5: Tests for in vitro Cytotoxicity</em>—Provides
+guidelines for evaluating the potential cytotoxic effects of a medical
+device material on cells.<br />
+</li>
+<li><strong>ISO 10993-12</strong>: <em>Sample Preparation and Reference
+Materials</em>—Guidelines for preparing samples and reference materials
+for testing to ensure consistent and reliable results.</li>
+</ol>
+<p>These standards ensure that the study was conducted with the highest
+level of scientific rigor and consistency, providing a reliable
+assessment of the biological impact of the test article.</p>
+</div>
+<div id="compliance" class="section level2">
+<h2>Compliance</h2>
+<p>This study complies with the following regulations:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Good Laboratory Practice (GLP) Regulations (21 CFR Part
+58)</strong>: GLP standards ensure that the study is conducted with
+transparency, accountability, and rigorous scientific practices,
+guaranteeing the integrity of the study data.</p></li>
+<li><p><strong>ISO/IEC 17025:2017</strong>: <em>General Requirements for
+the Competence of Testing and Calibration Laboratories</em>—ISO 17025
+accreditation ensures that the testing facility is competent to perform
+laboratory testing with a high degree of accuracy and
+reliability.</p></li>
+</ol>
+<p>Compliance with these regulations guarantees that the study data
+meets both legal and quality assurance requirements, ensuring the
+validity and credibility of the test results.</p>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="test-and-control-articles-1" class="section level2">
+<h2>Test and Control Articles</h2>
 <div id="test-article" class="section level3">
-<h3>3.1 Test Article</h3>
-<ul>
-<li><strong>Name:</strong> Hygenix Mask<br />
-</li>
-<li><strong>Manufacturer:</strong> Hygenix Inc.<br />
-</li>
-<li><strong>Batch/Lot Number:</strong> HYX-202305001<br />
-</li>
-<li><strong>Physical State:</strong> Solid<br />
-</li>
-<li><strong>Color:</strong> Blue<br />
-</li>
-<li><strong>Size:</strong> 180 x 95 mm<br />
-</li>
-<li><strong>Storage Conditions:</strong> Room temperature<br />
-</li>
-<li><strong>Intended Use:</strong> To provide respiratory protection in
-medical settings by filtering particulate matter.</li>
-</ul>
+<h3>Test Article</h3>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Dehydrated Boulders</td>
+</tr>
+<tr class="even">
+<td><strong>Manufacturer</strong></td>
+<td>ACME Corporation</td>
+</tr>
+<tr class="odd">
+<td><strong>Batch/Lot Number</strong></td>
+<td>BB1940WSC</td>
+</tr>
+<tr class="even">
+<td><strong>Expiration Date</strong></td>
+<td>2025-12-31</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage Conditions</strong></td>
+<td>Room temperature</td>
+</tr>
+</tbody>
+</table>
+<p>*Note** The information about the test article was supplied by the
+sponsor wherever applicable. The Sponsor is responsible for all test
+article characterization data as specified in the GLP.</p>
 </div>
 <div id="negative-control-article" class="section level3">
-<h3>3.2 Negative Control Article</h3>
-<ul>
-<li><strong>Name:</strong> Polyethylene Pellets<br />
-</li>
-<li><strong>Extraction Ratio:</strong> 3 cm²/mL<br />
-</li>
-<li><strong>Physical State:</strong> Solid<br />
-</li>
-<li><strong>Color:</strong> White<br />
-</li>
-<li><strong>Storage Conditions:</strong> Room temperature<br />
-</li>
-<li><strong>Extraction Solvent:</strong> MEM medium with 10% fetal
-bovine serum (FBS).</li>
-</ul>
+<h3>Negative Control Article</h3>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="65%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>High-density Polyethylene (HDPE)</td>
+</tr>
+<tr class="even">
+<td><strong>Extraction Ratio</strong></td>
+<td>3 cm²/1 mL</td>
+</tr>
+<tr class="odd">
+<td><strong>Physical State</strong></td>
+<td>Solid</td>
+</tr>
+<tr class="even">
+<td><strong>Color</strong></td>
+<td>White</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage Conditions</strong></td>
+<td>Room temperature</td>
+</tr>
+<tr class="even">
+<td><strong>Extraction Solvent</strong></td>
+<td>MEM medium with 10% fetal bovine serum (FBS)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="positive-control-article" class="section level3">
-<h3>3.3 Positive Control Article</h3>
-<ul>
-<li><strong>Name:</strong> PVC Plastic<br />
-</li>
-<li><strong>Extraction Ratio:</strong> 3 cm²/mL<br />
-</li>
-<li><strong>Physical State:</strong> Solid<br />
-</li>
-<li><strong>Color:</strong> Clear<br />
-</li>
-<li><strong>Extraction Solvent:</strong> MEM medium with 10% FBS.</li>
-</ul>
+<h3>Positive Control Article</h3>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="65%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Name</strong></td>
+<td>Latex</td>
+</tr>
+<tr class="even">
+<td><strong>Extraction Ratio</strong></td>
+<td>3 cm²/1 mL</td>
+</tr>
+<tr class="odd">
+<td><strong>Physical State</strong></td>
+<td>Solid</td>
+</tr>
+<tr class="even">
+<td><strong>Color</strong></td>
+<td>Tan</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage Conditions</strong></td>
+<td>Room temperature</td>
+</tr>
+<tr class="even">
+<td><strong>Extraction Solvent</strong></td>
+<td>MEM medium with 10% FBS</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="media-control" class="section level3">
-<h3>3.4 Media Control</h3>
-<ul>
-<li><strong>Name:</strong> MEM medium with 10% FBS</li>
-</ul>
-<hr />
+<h3>Media Control</h3>
+<p>MEM medium with 10% fetal bovine serum (FBS)</p>
+<div style="page-break-after: always;">
+
 </div>
 </div>
-<div id="pre-and-post-extract-appearance" class="section level2">
-<h2>4. Pre and Post Extract Appearance</h2>
-<ul>
-<li><strong>Pre-Extract Appearance:</strong> Clear and free of
-particulates.<br />
-</li>
-<li><strong>Post-Extract Appearance:</strong> No significant color
-changes were noted for both the test article and controls.</li>
-</ul>
-<hr />
 </div>
-<div id="test-system" class="section level2">
-<h2>5. Test System</h2>
-<div id="cell-line" class="section level3">
-<h3>5.1 Cell Line</h3>
-<ul>
-<li><strong>Name:</strong> HeLa Cells, obtained from ATCC (American Type
-Culture Collection), USA.<br />
-</li>
-<li><strong>Justification:</strong> HeLa Cells cells are widely used for
-cytotoxicity studies due to their sensitivity to cytotoxic
-extracts.</li>
-</ul>
-<hr />
+<div id="equipment-and-reagents" class="section level2">
+<h2>Equipment and Reagents</h2>
+<div id="equipment" class="section level3">
+<h3>Equipment</h3>
+<table>
+<colgroup>
+<col width="39%" />
+<col width="28%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Equipment Name</strong></th>
+<th><strong>Equipment Number</strong></th>
+<th><strong>Calibration Expire</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Autoclave</td>
+<td>ACME-001</td>
+<td>2025-03-09</td>
+</tr>
+<tr class="even">
+<td>CO2 Incubator</td>
+<td>BUGS-006</td>
+<td>2025-03-09</td>
+</tr>
+<tr class="odd">
+<td>Inverted microscope</td>
+<td>DAFFY-007</td>
+<td>2025-06-15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="reagents" class="section level3">
+<h3>Reagents</h3>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="18%" />
+<col width="13%" />
+<col width="19%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Reagent Name</strong></th>
+<th><strong>Manufacturer</strong></th>
+<th><strong>Part Number</strong></th>
+<th><strong>Lot Number</strong></th>
+<th><strong>Expiration Date</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fetal Bovine Serum (FBS)</td>
+<td>Wile E. Biotech Industries</td>
+<td>FBS-002</td>
+<td>FBS-LOT-2024</td>
+<td>2025-01-31</td>
+</tr>
+<tr class="even">
+<td>MEM Medium</td>
+<td>Road Runner Labs</td>
+<td>MEM-003</td>
+<td>MEM-LOT-5678</td>
+<td>2025-06-30</td>
+</tr>
+<tr class="odd">
+<td>Trypsin</td>
+<td>Bugs Bunny Pharmaceuticals</td>
+<td>TRYPSIN-004</td>
+<td>TRYPSIN-LOT-9012</td>
+<td>2025-08-15</td>
+</tr>
+<tr class="even">
+<td>Penicillin/Streptomycin</td>
+<td>Daffy Duck Labs</td>
+<td>PENSTREP-005</td>
+<td>PENSTREP-LOT-3456</td>
+<td>2025-11-01</td>
+</tr>
+<tr class="odd">
+<td>PBS (Phosphate-buffered saline)</td>
+<td>Tweety Solutions</td>
+<td>PBS-006</td>
+<td>PBS-LOT-7890</td>
+<td>2026-01-20</td>
+</tr>
+<tr class="even">
+<td>Isopropanol (99.9%)</td>
+<td>ACME Industrial Reagents</td>
+<td>ISO-007</td>
+<td>ISO-LOT-1122</td>
+<td>2026-03-15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="identification-of-test-system" class="section level2">
+<h2>Identification of Test System</h2>
+<p>L929 mouse fibroblast cells obtained from ATCC (American Type Culture
+Collection), USA.</p>
+</div>
+<div id="justification-of-test-system-and-route-of-administration" class="section level2">
+<h2>Justification of Test System and Route of Administration</h2>
+<p>Historically, mouse fibroblast L929 cells have been used for
+cytotoxicity studies because they demonstrate sensitivity to extractable
+cytotoxic articles. The test article was extracted and administered in
+vitro to mouse fibroblast L929 cells through a solvent compatible with
+the test system. This was the optimal route of administration available
+in this test system as recommended in the guidelines.</p>
+<div style="page-break-after: always;">
+
 </div>
 </div>
 <div id="experimental-design" class="section level2">
-<h2>6. Experimental Design</h2>
-<div id="preparation-of-extracts" class="section level3">
-<h3>6.1 Preparation of Extracts</h3>
-<ul>
-<li><strong>Extraction Solvent:</strong> MEM medium with 10% fetal
-bovine serum (FBS).<br />
-</li>
-<li><strong>Extraction Conditions:</strong>
-<ul>
-<li>The test article was extracted at a surface area-to-volume ratio of
-3 cm²/mL at 37°C for 72 hours.</li>
-</ul></li>
-</ul>
+<h2>Experimental Design</h2>
+<div id="extraction-process" class="section level3">
+<h3>Extraction Process</h3>
+<p>The extraction process was carried out at an extraction ratio of
+<strong>3 cm³:1 mL</strong> for all samples. Under aseptic conditions,
+samples were extracted with continuous agitation in closed, inert
+containers, using <strong>DMEM medium with 10% fetal bovine serum
+(FBS)</strong> as the extraction solvent.</p>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="34%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Sample</strong></th>
+<th><strong>Extract Volume (mL)</strong></th>
+<th><strong>Appearance of Extract</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test Article</td>
+<td>64.9 mL</td>
+<td>Clear</td>
+</tr>
+<tr class="even">
+<td>Negative Control</td>
+<td>64.9 mL</td>
+<td>Clear</td>
+</tr>
+<tr class="odd">
+<td>Positive Control</td>
+<td>64.9 mL</td>
+<td>Cloudy</td>
+</tr>
+<tr class="even">
+<td>Blank Control</td>
+<td>64.9 mL</td>
+<td>Clear</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="procedure" class="section level3">
-<h3>6.2 Procedure</h3>
-<ul>
-<li>Following extraction, the cells were exposed to the test article
-extract, as well as the positive and negative control extracts, and the
-media control for 48 hours.<br />
-</li>
-<li>The test article extract was prepared at concentrations of c(“100%”,
-“75%”, “50%”, “25%”).<br />
-</li>
-<li>The cells were incubated for 24 hours, after which cytotoxicity was
-assessed by the percentage of cell viability using the MTT assay.<br />
-</li>
-<li>Cell morphology was observed to evaluate any changes that could
-indicate cytotoxicity.</li>
-</ul>
-<hr />
+</div>
+<div id="experimental-procedure" class="section level2">
+<h2>Experimental Procedure</h2>
+<p>Once the extracts were prepared, they were tested on <strong>L929
+mouse fibroblast cells</strong> using a standard cytotoxicity assay. The
+cells were cultured in a 96-well plate and exposed to the test article
+extract and controls for approximately 48 hours.</p>
+<div id="evaluation-criteria" class="section level3">
+<h3>Evaluation Criteria</h3>
+<p>Morphological assessment of cytotoxicity was based on the following
+grading system:</p>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Grade</strong></th>
+<th><strong>Criteria</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>0 - None</strong></td>
+<td>No cell lysis observed; cells remained attached, with
+intracytoplasmic granules.</td>
+</tr>
+<tr class="even">
+<td><strong>1 - Slight</strong></td>
+<td>≤ 20% rounding of cells, with occasional lysed cells observed.</td>
+</tr>
+<tr class="odd">
+<td><strong>2 - Mild</strong></td>
+<td>&gt; 20% to ≤ 50% rounding, with no extensive cell lysis.</td>
+</tr>
+<tr class="even">
+<td><strong>3 - Moderate</strong></td>
+<td>&gt; 50% rounding, with lysed cells present.</td>
+</tr>
+<tr class="odd">
+<td><strong>4 - Severe</strong></td>
+<td>Nearly complete destruction of the cell layer, with extensive
+lysis.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="statistical-method" class="section level3">
+<h3>Statistical Method</h3>
+<p>The mode of three replicates will be calculated to evaluate cytotoxic
+potential.</p>
 <div style="page-break-after: always;">
 
 </div>
 </div>
 </div>
 <div id="results" class="section level2">
-<h2>7. Results</h2>
-<div id="acceptance-criteria" class="section level3">
-<h3>7.1 Acceptance Criteria</h3>
+<h2>Results</h2>
+<div id="pre-extraction-observations" class="section level3">
+<h3>Pre-Extraction Observations</h3>
 <table>
 <colgroup>
-<col width="26%" />
-<col width="73%" />
+<col width="27%" />
+<col width="72%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Grade</th>
-<th>Criteria</th>
+<th><strong>Observation</strong></th>
+<th><strong>Details</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>0 - None</td>
-<td>No cell lysis observed; intracytoplasmic granules present.</td>
-</tr>
-<tr class="even">
-<td>1 - Slight</td>
-<td>Less than or equal to 20% rounding of cells with occasional lysed
-cells.</td>
-</tr>
-<tr class="odd">
-<td>2 - Mild</td>
-<td>Greater than 20% to less than or equal to 50% rounding, with no
-extensive cell lysis.</td>
-</tr>
-<tr class="even">
-<td>3 - Moderate</td>
-<td>Greater than 50% rounding with lysed cells.</td>
-</tr>
-<tr class="odd">
-<td>4 - Severe</td>
-<td>Nearly complete destruction of the cell layers.</td>
+<td>Pre-Extraction</td>
+<td>All extracts were clear and free of particulates prior to the
+extraction process.</td>
 </tr>
 </tbody>
 </table>
-<p>The mean reactivity score of the three replicates will be reported
-using Qualitative Scoring.</p>
-<hr />
 </div>
+<div id="post-extraction-observations" class="section level3">
+<h3>Post-Extraction Observations</h3>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Sample</strong></th>
+<th><strong>Post-Extraction Observation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test Article</td>
+<td>No significant color changes were observed, and the extract remained
+clear.</td>
+</tr>
+<tr class="even">
+<td>Negative Control</td>
+<td>No significant color changes were observed, and the extract remained
+clear.</td>
+</tr>
+<tr class="odd">
+<td>Positive Control</td>
+<td>The extract became cloudy, and filtration was required before
+use.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>General Observations</strong></p>
+<p>No pH adjustments, centrifugation, or dilution processes were
+performed on the test and control samples.</p>
+<p><strong>Post-Extraction Observation</strong></p>
+<ul>
+<li><strong>Test Article</strong>: No significant color changes were
+observed, and the extract remained clear.</li>
+<li><strong>Negative Control</strong>: No significant color changes were
+observed, and the extract remained clear.</li>
+<li><strong>Positive Control</strong>: The extract became cloudy, and
+filtration was required before use.</li>
+</ul>
+<p>No pH adjustments, centrifugation, or dilution processes were
+performed on the test and control samples.</p>
+</div>
+<div id="morphological-scoring" class="section level3">
+<h3>Morphological Scoring</h3>
+<p>Each sample was tested in triplicate. The table below shows the
+results of the qualitative assessment of cytotoxicity:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Sample</strong></th>
+<th><strong>Replicate 1</strong></th>
+<th><strong>Replicate 2</strong></th>
+<th><strong>Replicate 3</strong></th>
+<th><strong>Modal Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test Article</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+</tr>
+<tr class="even">
+<td>Positive Control</td>
+<td>4 (Severe)</td>
+<td>4 (Severe)</td>
+<td>4 (Severe)</td>
+<td>4 (Severe)</td>
+</tr>
+<tr class="odd">
+<td>Negative Control</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+</tr>
+<tr class="even">
+<td>Blank Control</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+<td>0 (None)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="conclusion-1" class="section level2">
+<h2>Conclusion</h2>
+<p>The <strong>test article extract</strong>, when tested in triplicate,
+did not exhibit any cytotoxic effects at the tested concentration, as
+indicated by the <strong>modal reactivity score</strong> of <strong>0
+(None)</strong>. The positive control demonstrated expected
+<strong>severe cytotoxicity</strong>, while the negative and blank
+controls showed <strong>no cytotoxicity</strong>.</p>
 </div>
 <div id="record-storage" class="section level2">
-<h2>9. Record Storage</h2>
-<p>All raw data and a copy of the final report will be retained in the
-designated archive.</p>
-<hr />
+<h2>Record Storage</h2>
+<p>All raw data generated during this study, along with a copy of the
+final report, have been securely archived at <strong>ACME Labs</strong>’
+designated storage facility in accordance with internal protocols and
+regulatory requirements.</p>
 </div>
 <div id="confidentiality-agreement" class="section level2">
-<h2>10. Confidentiality Agreement</h2>
-<p>All confidentiality statements were agreed upon before the initiation
-of the study.</p>
-<hr />
+<h2>Confidentiality Agreement</h2>
+<p>The confidentiality of all data and study-related materials has been
+maintained as per the confidentiality agreement established prior to the
+initiation of the study.</p>
 </div>
 <div id="deviation-statement" class="section level2">
-<h2>12. Deviation Statement</h2>
-<p>No deviations from the approved study protocol were observed that
-would affect the validity of the data.</p>
-<hr />
+<h2>Deviation Statement</h2>
+<p>There were no deviations from the approved study protocol that would
+impact the validity or integrity of the data.</p>
 </div>
 
 

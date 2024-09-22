@@ -1,0 +1,33 @@
+\contentsline {subsection}{Quality Assurance Statement}{3}{section*.2}%
+\contentsline {subsection}{Inspections Overview}{3}{section*.3}%
+\contentsline {subsection}{GLP Compliance Statement}{4}{section*.4}%
+\contentsline {subsection}{Summary}{5}{section*.5}%
+\contentsline {subsubsection}{Test and Control Articles}{5}{section*.6}%
+\contentsline {subsubsection}{Test Method}{5}{section*.7}%
+\contentsline {subsubsection}{Conclusion}{5}{section*.8}%
+\contentsline {subsection}{Purpose}{6}{section*.9}%
+\contentsline {subsection}{Regulatory Standards}{6}{section*.10}%
+\contentsline {subsection}{Compliance}{6}{section*.11}%
+\contentsline {subsection}{Test and Control Articles}{7}{section*.12}%
+\contentsline {subsubsection}{Test Article}{7}{section*.13}%
+\contentsline {subsubsection}{Negative Control Article}{7}{section*.14}%
+\contentsline {subsubsection}{Positive Control Article}{7}{section*.15}%
+\contentsline {subsubsection}{Media Control}{7}{section*.16}%
+\contentsline {subsection}{Equipment and Reagents}{8}{section*.17}%
+\contentsline {subsubsection}{Equipment}{8}{section*.18}%
+\contentsline {subsubsection}{Reagents}{8}{section*.19}%
+\contentsline {subsection}{Identification of Test System}{8}{section*.20}%
+\contentsline {subsection}{Justification of Test System and Route of Administration}{8}{section*.21}%
+\contentsline {subsection}{Experimental Design}{9}{section*.22}%
+\contentsline {subsubsection}{Extraction Process}{9}{section*.23}%
+\contentsline {subsection}{Experimental Procedure}{9}{section*.24}%
+\contentsline {subsubsection}{Evaluation Criteria}{9}{section*.25}%
+\contentsline {subsubsection}{Statistical Method}{9}{section*.26}%
+\contentsline {subsection}{Results}{10}{section*.27}%
+\contentsline {subsubsection}{Pre-Extraction Observations}{10}{section*.28}%
+\contentsline {subsubsection}{Post-Extraction Observations}{10}{section*.29}%
+\contentsline {subsubsection}{Morphological Scoring}{10}{section*.30}%
+\contentsline {subsection}{Conclusion}{11}{section*.31}%
+\contentsline {subsection}{Record Storage}{11}{section*.32}%
+\contentsline {subsection}{Confidentiality Agreement}{11}{section*.33}%
+\contentsline {subsection}{Deviation Statement}{11}{section*.34}%

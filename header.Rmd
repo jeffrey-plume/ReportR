@@ -1,0 +1,50 @@
+---
+title: "ISO 10993-5 MEM Elution Test Report"
+author: "Prepared by `r params$study_director`"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+geometry: margin=1in
+subtitle: "Assessment of `r params$test_article` according to ISO 10993-5:2009"
+abstract: |  
+  This report summarizes the results of the MEM Elution assay for the cytotoxicity testing of `r params$test_article`. The purpose of this test is to assess the cytotoxic potential of the test article to determine if the material exhibits any toxic effects on mammalian cells.
+header-includes:
+  - \usepackage{mathptmx} # Times New Roman for pdflatex
+  - \usepackage{graphicx}
+  - \usepackage{booktabs}
+  - \usepackage{float}
+  - \usepackage{amsmath}
+  - \usepackage{fancyhdr}
+  - \usepackage{lastpage}
+  - \usepackage{hyperref}
+  - \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan}
+  - \pagestyle{fancy}
+  - \fancyhead[L]{ISO 10993-5 Cytotoxicity Test Report}
+  - \fancyhead[R]{ACME Labs Inc.}
+  - \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+output: 
+  pdf_document: 
+    toc: true
+    latex_engine: pdflatex  # Use pdflatex
+  word_document: 
+    toc: true
+  html_document: 
+    toc: true
+params:
+  report_number: "ACME-001"
+  test_article: "Dehydrated Boulders"
+  study_director: "Marvin the Martian"
+  quality_manager: "Wile E. Coyote"
+---
+
+\begin{center}
+
+  \textbf{`r params$report_number`}\\[0.5em]
+  Testing Facility: \\
+  ACME Labs\\
+  123 Research Ave\\
+  Burbank, CA, 16650\\
+  USA\\
+  www.ACMElabs.com\\
+  contact@ACMElabs.com, +1-800-555-1234\\
+\end{center}
+
+\newpage
