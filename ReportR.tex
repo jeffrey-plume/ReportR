@@ -1,0 +1,665 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\newpage
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan}
+\urlstyle{same}
+\pagestyle{fancy}
+\fancyhead[L]{ISO 10993-5 Cytotoxicity Test Report}
+\fancyhead[R]{ACME Labs Inc.}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={ISO 10993-5 MEM Elution Test Report},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{ISO 10993-5 MEM Elution Test Report}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Assessment of Dehydrated Boulders}
+\author{\vspace{20pt}
+
+Wile E. Coyote\\
+ACME Corporation\\
+123 Research Ave\\
+Burbank, CA, 91501\\
+USA Prepared by:\\
+Test Facility:\\}
+\date{September 22, 2024}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This report summarizes the results of the MEM Elution assay for the
+cytotoxicity testing of Dehydrated Boulders. The purpose of this test is
+to assess the cytotoxic potential of the test article to determine if
+the material exhibits any toxic effects on mammalian cells.
+\end{abstract}
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\newpage
+
+\subsection{Quality Assurance
+Statement}\label{quality-assurance-statement}
+
+The Quality Assurance Unit inspected/audited this study in compliance
+with the following regulations:
+
+\textbf{Good Laboratory Practice for Nonclinical Laboratory Studies,
+Title 21 of the Code of Federal Regulations, Part 58 (21 CFR Part 58)}
+
+\subsection{Inspections Overview}\label{inspections-overview}
+
+The Quality Assurance Unit conducted inspections on the following dates.
+The findings were reported to the Study Director. The final report was
+reviewed by the Quality Assurance Unit. The final report accurately
+describes the test methods in accordance with standard operating
+procedures, and the results are consistent with raw data from
+non-clinical studies conducted according to the study protocol.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2603}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Inspection
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Date of Inspection
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Performed by
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Date Reported to Study Director
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Study Protocol & 2024-09-07 & Mr.~Bugs Bunny & 2024-09-07 \\
+Study Procedure & 2024-09-11 & Mr.~Bugs Bunny & 2024-09-07 \\
+Raw Data & 2024-09-14 & Mr.~Bugs Bunny & 2024-09-14 \\
+Final Report & 2024-09-15 & Mr.~Bugs Bunny & 2024-09-15 \\
+\end{longtable}
+
+\begin{tabular}{p{6cm} p{6cm}}
+  \\[10mm]
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+   Mr. Bugs Bunny  & Date \\
+  Quality Manager &  \\[10mm]
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+   Wile E. Coyote  & Date \\
+  Study Director &  \\
+  \end{tabular}
+
+\newpage
+
+\subsection{GLP Compliance Statement}\label{glp-compliance-statement}
+
+This study was fully in accordance with the technical requirements of
+the study protocol.
+
+This study was conducted in compliance with Good Laboratory Practice
+(GLP) Regulation 21 CFR Part 58, U.S. Food and Drug Administration
+(FDA).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4225}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5775}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Test Article Receipt & 2024-09-01 \\
+Protocol Effective Date & 2024-09-07 \\
+Technical Initiation Date & 2024-09-08 \\
+Technical Completion Date & 2024-09-13 \\
+Final Report Completion Date & 2024-09-15 \\
+\end{longtable}
+
+\begin{tabular}{p{6cm} p{6cm}}
+  \\[10mm]
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+   Mr. Bugs Bunny  & Date \\
+  Quality Manager &  \\[10mm] % Adds 10mm vertical space before the signature
+  % Adding a second signature line for Study Director
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+   Wile E. Coyote  & Date \\
+  Study Director &  \\
+  \end{tabular}
+
+\newpage
+
+\subsection{Summary}\label{summary}
+
+\subsubsection{Test and Control
+Articles}\label{test-and-control-articles}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Article Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Name}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Lot Number}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Expiration}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Storage}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Test Article & Dehydrated Boulders & BB1940WSC & 2025-12-31 & Room
+temperature \\
+Negative Control & Polyethylene Pellets & POLY-LOT-5678 & 2025-03-15 &
+Room temperature \\
+Positive Control & Latex & LATEX-LOT-1234 & 2025-06-30 & Room
+temperature \\
+Blank Control & N/A & --- & N/A & Room temperature \\
+\end{longtable}
+
+\subsubsection{Test Method}\label{test-method}
+
+Potential toxicity of test article was evaluated using the MEM Elution
+method in accordance with ISO 10993-5: 2009 Biological evaluation of
+Medical Devices---Part 5: Tests for in vitro Cytotoxicity. Study
+protocol number: ACME-CYTO
+
+\subsubsection{Conclusion}\label{conclusion}
+
+Under the conditions of this study, the test article extract did not
+show cytotoxic potential when testing on L929 cells.
+
+\newpage
+
+\subsection{Purpose}\label{purpose}
+
+The purpose of this test was to determine the biological reactivity of
+mouse fibroblast L929 cells in response to the test article---Dehydrated
+Boulders. This study evaluated whether the test article exhibited any
+toxic effects on mammalian cells under in vitro conditions.
+Specifically, the test assessed the cytotoxic potential to determine the
+safety and biocompatibility of the material when used according to its
+intended purpose.
+
+\subsection{Regulatory Standards}\label{regulatory-standards}
+
+This study was conducted in accordance with the following regulatory
+standards:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ISO 10993-1}: \emph{Evaluation and Testing within a Risk
+  Management Process}---General requirements for evaluating the
+  biological impact of medical devices.\\
+\item
+  \textbf{ISO 10993-5:2009}: \emph{Biological Evaluation of Medical
+  Devices---Part 5: Tests for in vitro Cytotoxicity}---Provides
+  guidelines for evaluating the potential cytotoxic effects of a medical
+  device material on cells.\\
+\item
+  \textbf{ISO 10993-12}: \emph{Sample Preparation and Reference
+  Materials}---Guidelines for preparing samples and reference materials
+  for testing to ensure consistent and reliable results.
+\end{enumerate}
+
+These standards ensure that the study was conducted with the highest
+level of scientific rigor and consistency, providing a reliable
+assessment of the biological impact of the test article.
+
+\subsection{Compliance}\label{compliance}
+
+This study complies with the following regulations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Good Laboratory Practice (GLP) Regulations (21 CFR Part 58)}:
+  GLP standards ensure that the study is conducted with transparency,
+  accountability, and rigorous scientific practices, guaranteeing the
+  integrity of the study data.
+\item
+  \textbf{ISO/IEC 17025:2017}: \emph{General Requirements for the
+  Competence of Testing and Calibration Laboratories}---ISO 17025
+  accreditation ensures that the testing facility is competent to
+  perform laboratory testing with a high degree of accuracy and
+  reliability.
+\end{enumerate}
+
+Compliance with these regulations guarantees that the study data meets
+both legal and quality assurance requirements, ensuring the validity and
+credibility of the test results.
+
+\newpage
+
+\subsection{Test and Control
+Articles}\label{test-and-control-articles-1}
+
+\subsubsection{Test Article}\label{test-article}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Name} & Dehydrated Boulders \\
+\textbf{Manufacturer} & ACME Corporation \\
+\textbf{Batch/Lot Number} & BB1940WSC \\
+\textbf{Expiration Date} & 2025-12-31 \\
+\textbf{Storage Conditions} & Room temperature \\
+\end{longtable}
+
+*Note** The information about the test article was supplied by the
+sponsor wherever applicable. The Sponsor is responsible for all test
+article characterization data as specified in the GLP.
+
+\subsubsection{Negative Control Article}\label{negative-control-article}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6571}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Name} & High-density Polyethylene (HDPE) \\
+\textbf{Extraction Ratio} & 3 cm²/1 mL \\
+\textbf{Physical State} & Solid \\
+\textbf{Color} & White \\
+\textbf{Storage Conditions} & Room temperature \\
+\textbf{Extraction Solvent} & MEM medium with 10\% fetal bovine serum
+(FBS) \\
+\end{longtable}
+
+\subsubsection{Positive Control Article}\label{positive-control-article}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Name} & Latex \\
+\textbf{Extraction Ratio} & 3 cm²/1 mL \\
+\textbf{Physical State} & Solid \\
+\textbf{Color} & Tan \\
+\textbf{Storage Conditions} & Room temperature \\
+\textbf{Extraction Solvent} & MEM medium with 10\% FBS \\
+\end{longtable}
+
+\subsubsection{Media Control}\label{media-control}
+
+MEM medium with 10\% fetal bovine serum (FBS)
+
+\newpage
+
+\subsection{Equipment and Reagents}\label{equipment-and-reagents}
+
+\subsubsection{Equipment}\label{equipment}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+\textbf{Equipment Name} & \textbf{Equipment Number} &
+\textbf{Calibration Expire} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Autoclave & ACME-001 & 2025-03-09 \\
+CO2 Incubator & BUGS-006 & 2025-03-09 \\
+Inverted microscope & DAFFY-007 & 2025-06-15 \\
+\end{longtable}
+
+\subsubsection{Reagents}\label{reagents}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2533}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1867}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1867}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1867}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1867}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Reagent Name}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Manufacturer}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Part Number}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Lot Number}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Expiration Date}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Fetal Bovine Serum (FBS) & Wile E. Biotech Industries & FBS-002 &
+FBS-LOT-2024 & 2025-01-31 \\
+MEM Medium & Road Runner Labs & MEM-003 & MEM-LOT-5678 & 2025-06-30 \\
+Trypsin & Bugs Bunny Pharmaceuticals & TRYPSIN-004 & TRYPSIN-LOT-9012 &
+2025-08-15 \\
+Penicillin/Streptomycin & Daffy Duck Labs & PENSTREP-005 &
+PENSTREP-LOT-3456 & 2025-11-01 \\
+PBS (Phosphate-buffered saline) & Tweety Solutions & PBS-006 &
+PBS-LOT-7890 & 2026-01-20 \\
+Isopropanol (99.9\%) & ACME Industrial Reagents & ISO-007 & ISO-LOT-1122
+& 2026-03-15 \\
+\end{longtable}
+
+\subsection{Identification of Test
+System}\label{identification-of-test-system}
+
+L929 mouse fibroblast cells obtained from ATCC (American Type Culture
+Collection), USA.
+
+\subsection{Justification of Test System and Route of
+Administration}\label{justification-of-test-system-and-route-of-administration}
+
+Historically, mouse fibroblast L929 cells have been used for
+cytotoxicity studies because they demonstrate sensitivity to extractable
+cytotoxic articles. The test article was extracted and administered in
+vitro to mouse fibroblast L929 cells through a solvent compatible with
+the test system. This was the optimal route of administration available
+in this test system as recommended in the guidelines.
+
+\newpage
+
+\subsection{Experimental Design}\label{experimental-design}
+
+\subsubsection{Extraction Process}\label{extraction-process}
+
+The extraction process was carried out at an extraction ratio of
+\textbf{3 cm³:1 mL} for all samples. Under aseptic conditions, samples
+were extracted with continuous agitation in closed, inert containers,
+using \textbf{DMEM medium with 10\% fetal bovine serum (FBS)} as the
+extraction solvent.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2778}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3472}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Sample}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Extract Volume (mL)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Appearance of Extract}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Test Article & 64.9 mL & Clear \\
+Negative Control & 64.9 mL & Clear \\
+Positive Control & 64.9 mL & Cloudy \\
+Blank Control & 64.9 mL & Clear \\
+\end{longtable}
+
+\subsection{Experimental Procedure}\label{experimental-procedure}
+
+Once the extracts were prepared, they were tested on \textbf{L929 mouse
+fibroblast cells} using a standard cytotoxicity assay. The cells were
+cultured in a 96-well plate and exposed to the test article extract and
+controls for approximately 48 hours.
+
+\subsubsection{Evaluation Criteria}\label{evaluation-criteria}
+
+Morphological assessment of cytotoxicity was based on the following
+grading system:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2917}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7083}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Grade}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Criteria}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{0 - None} & No cell lysis observed; cells remained attached,
+with intracytoplasmic granules. \\
+\textbf{1 - Slight} & ≤ 20\% rounding of cells, with occasional lysed
+cells observed. \\
+\textbf{2 - Mild} & \textgreater{} 20\% to ≤ 50\% rounding, with no
+extensive cell lysis. \\
+\textbf{3 - Moderate} & \textgreater{} 50\% rounding, with lysed cells
+present. \\
+\textbf{4 - Severe} & Nearly complete destruction of the cell layer,
+with extensive lysis. \\
+\end{longtable}
+
+\subsubsection{Statistical Method}\label{statistical-method}
+
+The mode of three replicates will be calculated to evaluate cytotoxic
+potential.
+
+\newpage
+
+\subsection{Results}\label{results}
+
+\subsubsection{Pre-Extraction
+Observations}\label{pre-extraction-observations}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2982}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7018}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Observation}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Details}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Pre-Extraction & All extracts were clear and free of particulates prior
+to the extraction process. \\
+\end{longtable}
+
+\subsubsection{Post-Extraction
+Observations}\label{post-extraction-observations}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3462}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6538}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Sample}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Post-Extraction Observation}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Test Article & No significant color changes were observed, and the
+extract remained clear. \\
+Negative Control & No significant color changes were observed, and the
+extract remained clear. \\
+Positive Control & The extract became cloudy, and filtration was
+required before use. \\
+\end{longtable}
+
+\textbf{General Observations}
+
+No pH adjustments, centrifugation, or dilution processes were performed
+on the test and control samples.
+
+\textbf{Post-Extraction Observation}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Test Article}: No significant color changes were observed, and
+  the extract remained clear.
+\item
+  \textbf{Negative Control}: No significant color changes were observed,
+  and the extract remained clear.
+\item
+  \textbf{Positive Control}: The extract became cloudy, and filtration
+  was required before use.
+\end{itemize}
+
+No pH adjustments, centrifugation, or dilution processes were performed
+on the test and control samples.
+
+\subsubsection{Morphological Scoring}\label{morphological-scoring}
+
+Each sample was tested in triplicate. The table below shows the results
+of the qualitative assessment of cytotoxicity:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Sample}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Replicate 1}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Replicate 2}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Replicate 3}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Modal Score}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Test Article & 0 (None) & 0 (None) & 0 (None) & 0 (None) \\
+Positive Control & 4 (Severe) & 4 (Severe) & 4 (Severe) & 4 (Severe) \\
+Negative Control & 0 (None) & 0 (None) & 0 (None) & 0 (None) \\
+Blank Control & 0 (None) & 0 (None) & 0 (None) & 0 (None) \\
+\end{longtable}
+
+\subsection{Conclusion}\label{conclusion-1}
+
+The \textbf{test article extract}, when tested in triplicate, did not
+exhibit any cytotoxic effects at the tested concentration, as indicated
+by the \textbf{modal reactivity score} of \textbf{0 (None)}. The
+positive control demonstrated expected \textbf{severe cytotoxicity},
+while the negative and blank controls showed \textbf{no cytotoxicity}.
+
+\subsection{Record Storage}\label{record-storage}
+
+All raw data generated during this study, along with a copy of the final
+report, have been securely archived at \textbf{ACME Labs}' designated
+storage facility in accordance with internal protocols and regulatory
+requirements.
+
+\subsection{Confidentiality Agreement}\label{confidentiality-agreement}
+
+The confidentiality of all data and study-related materials has been
+maintained as per the confidentiality agreement established prior to the
+initiation of the study.
+
+\subsection{Deviation Statement}\label{deviation-statement}
+
+There were no deviations from the approved study protocol that would
+impact the validity or integrity of the data.
+
+\end{document}

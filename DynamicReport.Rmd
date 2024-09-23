@@ -1,0 +1,68 @@
+---
+title: "ISO 10993-5 MEM Elution Test Report"
+author: |
+  \vspace{20pt}
+  Wiley Coyote`\
+  ACME Corporation\
+  123 Research Ave\
+  Burbank, CA, 91501\
+  USA
+  Prepared by:\
+  Test Facility:\
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+fontsize: 12pt
+geometry: margin=1in
+subtitle: "Assessment of Cytotoxicity"
+abstract: |  
+  This report summarizes the results of the MEM Elution assay for the cytotoxicity testing of test_article. The purpose of this test is to assess the cytotoxic potential of the test article to determine if the material exhibits any toxic effects on mammalian cells.
+output: html_document
+runtime: shiny
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+## Quality Assurance Statement
+
+The Quality Assurance Unit inspected/audited this study in compliance
+with the following regulations:
+
+**Good Laboratory Practice for Nonclinical Laboratory Studies, Title 21
+of the Code of Federal Regulations, Part 58 (21 CFR Part 58)**
+
+## 
+
+| Inspection      | Date of Inspection                      | Performed by                    | Date Reported to Study Director     |
+|------------------|------------------|------------------|-------------------|
+| Study Protocol  | `r dateInput("protcol_inspection", "")` | `r textInput("protcol_by", "")` | `r dateInput("protcol_report", "")` |
+| Study Procedure | `r dateInput("study_inspection", "")`   | `r textInput("study_by", "")`   | `r dateInput("protcol_report", "")` |
+| Raw Data        | `r dateInput("raw_inspection", "")`     | `r textInput("raw_by", "")`     | `r dateInput("protcol_report", "")` |
+| Final Report    | `r dateInput("final_inspection", "")`   | `r textInput("final_by", "")`   | `r dateInput("protcol_report", "")` |
+
+## GLP Compliance Statement
+
+This study was fully in accordance with the technical requirements of
+the study protocol.
+
+This study was conducted in compliance with Good Laboratory Practice
+(GLP) Regulation 21 CFR Part 58, U.S. Food and Drug Administration
+(FDA).
+
+|                              |                                        |
+|------------------------------|---------------------------------------:|
+| Test Article Receipt         |       `r dateInput("recipt_date", "")` |
+| Protocol Effective Date      |    `r dateInput("effective_date", "")` |
+| Technical Initiation Date    |        `r dateInput("start_date", "")` |
+| Technical Completion Date    |   `r dateInput("completion_date", "")` |
+| Final Report Completion Date | `r dateInput("final_report_date", "")` |
+
+### Test and Control Articles
+
+| **Article Type** | **Name**                            | **Lot Number**                         | **Expiration**                         | **Storage**                   |
+|---------------|---------------|---------------|---------------|---------------|
+| Test Article     | `r textboxInput("test_article", ""` | `r params$batch_number`                | `r params$expiration`                  | `r params$storage_conditions` |
+| Negative Control | `r selet("test_article", ""`        | `r params$lot_number_negative_control` | `r params$negative_control_expiration` | Room temperature              |
+| Positive Control | `r textboxInput("test_article", ""` | `r params$lot_number_positive_control` | `r params$positive_control_expiration` | Room temperature              |
+| Blank Control    | `r textboxInput("test_article", ""` | —                                      | N/A                                    | Room temperature              |
+
+### Test Method

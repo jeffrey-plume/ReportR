@@ -1,14 +1,6 @@
 ---
 title: "ISO 10993-5 MEM Elution Test Report"
-author: |
-  \vspace{20pt}
-  `r params$study_director`\
-  ACME Corporation\
-  123 Research Ave\
-  Burbank, CA, 91501\
-  USA
-  Prepared by:\
-  Test Facility:\
+author: "Jeffey Plume"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 fontsize: 12pt
 geometry: margin=1in
@@ -31,40 +23,19 @@ header-includes:
   - \fancyhead[R]{ACME Labs Inc.}
   - \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
 output: 
+  word_document: 
+    toc: true
+    reference_docx: "latex_template.dotx"
   html_document: 
     toc: true
   pdf_document: 
     toc: true
+    keep_md: true
     latex_engine: xelatex
-  word_document: 
-    toc: true
 editor_options: 
   markdown: 
     wrap: 72
 params:
-  # General Info
-  
-  # Pre-Extraction Observations
-  # Post-Extraction Observations
-  # General Observations
-  
-  # Test Article
-  
-  
-  # Extraction Conditions (Same for all samples)
-  
-  
-  
-  
-  
-  
-  
-  # Appearances
-  # Positive Control Info
-  
-  # Negative Control Info
-  
-  # Blank Control Morphological Scores
   report_number: "ACME-001"
   sample_received_date: "2024-09-01"
   protocol_inspection_date: "2024-09-07"
@@ -132,8 +103,8 @@ if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
 
@@ -141,6 +112,8 @@ if (knitr::is_latex_output()) {
 
 The Quality Assurance Unit inspected/audited this study in compliance
 with the following regulations:
+
+<br>
 
 **Good Laboratory Practice for Nonclinical Laboratory Studies, Title 21
 of the Code of Federal Regulations, Part 58 (21 CFR Part 58)**
@@ -154,8 +127,10 @@ describes the test methods in accordance with standard operating
 procedures, and the results are consistent with raw data from
 non-clinical studies conducted according to the study protocol.
 
+<br>
+
 | Inspection      | Date of Inspection                      | Performed by               | Date Reported to Study Director         |
-|------------------|------------------|------------------|--------------------|
+|------------------|------------------|------------------|-------------------|
 | Study Protocol  | `r params$protocol_inspection_date`     | `r params$quality_manager` | `r params$protocol_inspection_date`     |
 | Study Procedure | `r params$procedure_inspection_date`    | `r params$quality_manager` | `r params$protocol_inspection_date`     |
 | Raw Data        | `r params$raw_data_inspection_date`     | `r params$quality_manager` | `r params$raw_data_inspection_date`     |
@@ -235,8 +210,8 @@ if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
 
@@ -332,9 +307,10 @@ if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
+```
 ```
 
 ## Summary
@@ -348,58 +324,83 @@ if (knitr::is_latex_output()) {
 | Positive Control | Latex                   | `r params$lot_number_positive_control` | `r params$positive_control_expiration` | Room temperature              |
 | Blank Control    | N/A                     | —                                      | N/A                                    | Room temperature              |
 
-
 ### Test Method
 
-Potential toxicity of test article was evaluated using the MEM Elution method in accordance with ISO 10993-5: 2009 Biological evaluation of Medical Devices—Part 5: Tests for in vitro Cytotoxicity. 
-Study protocol number: ACME-CYTO
+Potential toxicity of test article was evaluated using the MEM Elution
+method in accordance with ISO 10993-5: 2009 Biological evaluation of
+Medical Devices—Part 5: Tests for in vitro Cytotoxicity. Study protocol
+number: ACME-CYTO
 
 ### Conclusion
 
-Under the conditions of this study, the test article extract did not show cytotoxic potential when testing on L929 cells. 
-
+Under the conditions of this study, the test article extract did not
+show cytotoxic potential when testing on L929 cells.
 
 ```{r, results="asis", echo=FALSE}
 if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
 
 ## Purpose
-The purpose of this test was to determine the biological reactivity of mouse fibroblast L929 cells in response to the test article—`r params$test_article`. This study evaluated whether the test article exhibited any toxic effects on mammalian cells under in vitro conditions. Specifically, the test assessed the cytotoxic potential to determine the safety and biocompatibility of the material when used according to its intended purpose.
+
+The purpose of this test was to determine the biological reactivity of
+mouse fibroblast L929 cells in response to the test
+article—`r params$test_article`. This study evaluated whether the test
+article exhibited any toxic effects on mammalian cells under in vitro
+conditions. Specifically, the test assessed the cytotoxic potential to
+determine the safety and biocompatibility of the material when used
+according to its intended purpose.
 
 ## Regulatory Standards
 
-This study was conducted in accordance with the following regulatory standards:
-
-1. **ISO 10993-1**: *Evaluation and Testing within a Risk Management Process*—General requirements for evaluating the biological impact of medical devices.  
-2. **ISO 10993-5:2009**: *Biological Evaluation of Medical Devices—Part 5: Tests for in vitro Cytotoxicity*—Provides guidelines for evaluating the potential cytotoxic effects of a medical device material on cells.  
-3. **ISO 10993-12**: *Sample Preparation and Reference Materials*—Guidelines for preparing samples and reference materials for testing to ensure consistent and reliable results.
-
-These standards ensure that the study was conducted with the highest level of scientific rigor and consistency, providing a reliable assessment of the biological impact of the test article.
-
+This study was conducted in accordance with the following regulatory
+standards:
+<br>
+1.  **ISO 10993-1**: *Evaluation and Testing within a Risk Management
+    Process*—General requirements for evaluating the biological impact
+    of medical devices.
+2.  **ISO 10993-5:2009**: *Biological Evaluation of Medical Devices—Part
+    5: Tests for in vitro Cytotoxicity*—Provides guidelines for
+    evaluating the potential cytotoxic effects of a medical device
+    material on cells.
+3.  **ISO 10993-12**: *Sample Preparation and Reference
+    Materials*—Guidelines for preparing samples and reference materials
+    for testing to ensure consistent and reliable results.
+<br>
+These standards ensure that the study was conducted with the highest
+level of scientific rigor and consistency, providing a reliable
+assessment of the biological impact of the test article.
 
 ## Compliance
 
 This study complies with the following regulations:
+<br>
+1.  **Good Laboratory Practice (GLP) Regulations (21 CFR Part 58)**: GLP
+    standards ensure that the study is conducted with transparency,
+    accountability, and rigorous scientific practices, guaranteeing the
+    integrity of the study data.\
 
-1. **Good Laboratory Practice (GLP) Regulations (21 CFR Part 58)**: GLP standards ensure that the study is conducted with transparency, accountability, and rigorous scientific practices, guaranteeing the integrity of the study data.
-   
-2. **ISO/IEC 17025:2017**: *General Requirements for the Competence of Testing and Calibration Laboratories*—ISO 17025 accreditation ensures that the testing facility is competent to perform laboratory testing with a high degree of accuracy and reliability.
-
-Compliance with these regulations guarantees that the study data meets both legal and quality assurance requirements, ensuring the validity and credibility of the test results.
+2.  **ISO/IEC 17025:2017**: *General Requirements for the Competence of
+    Testing and Calibration Laboratories*—ISO 17025 accreditation
+    ensures that the testing facility is competent to perform laboratory
+    testing with a high degree of accuracy and reliability.
+<br>
+Compliance with these regulations guarantees that the study data meets
+both legal and quality assurance requirements, ensuring the validity and
+credibility of the test results.
 
 ```{r, results="asis", echo=FALSE}
 if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
 
@@ -410,14 +411,14 @@ if (knitr::is_latex_output()) {
 |                        |                               |
 |------------------------|-------------------------------|
 | **Name**               | `r params$test_article`       |
-| **Manufacturer**       | `r params$manufacturer`        |
-| **Batch/Lot Number**   | `r params$batch_number`       |        
+| **Manufacturer**       | `r params$manufacturer`       |
+| **Batch/Lot Number**   | `r params$batch_number`       |
 | **Expiration Date**    | `r params$expiration`         |
 | **Storage Conditions** | `r params$storage_conditions` |
 
-
-*Note** The information about the test article was supplied by the sponsor wherever applicable. The Sponsor is responsible for all test article characterization data as specified in the GLP.
-
+\*Note\*\* The information about the test article was supplied by the
+sponsor wherever applicable. The Sponsor is responsible for all test
+article characterization data as specified in the GLP.
 
 ### Negative Control Article
 
@@ -425,21 +426,21 @@ if (knitr::is_latex_output()) {
 |------------------------|----------------------------------------------|
 | **Name**               | High-density Polyethylene (HDPE)             |
 | **Extraction Ratio**   | 3 cm²/1 mL                                   |
-| **Physical State**     | Solid                                         |
-| **Color**              | White                                         |
+| **Physical State**     | Solid                                        |
+| **Color**              | White                                        |
 | **Storage Conditions** | Room temperature                             |
 | **Extraction Solvent** | MEM medium with 10% fetal bovine serum (FBS) |
 
 ### Positive Control Article
 
-|                        |                                              |
-|------------------------|----------------------------------------------|
-| **Name**               | Latex                                         |
-| **Extraction Ratio**   | 3 cm²/1 mL                                    |
-| **Physical State**     | Solid                                         |
-| **Color**              | Tan                                           |
-| **Storage Conditions** | Room temperature                             |
-| **Extraction Solvent** | MEM medium with 10% FBS                      |
+|                        |                         |
+|------------------------|-------------------------|
+| **Name**               | Latex                   |
+| **Extraction Ratio**   | 3 cm²/1 mL              |
+| **Physical State**     | Solid                   |
+| **Color**              | Tan                     |
+| **Storage Conditions** | Room temperature        |
+| **Extraction Solvent** | MEM medium with 10% FBS |
 
 ### Media Control
 
@@ -450,8 +451,8 @@ if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
 
@@ -459,37 +460,44 @@ if (knitr::is_latex_output()) {
 
 ### Equipment
 
-| **Equipment Name**           | **Equipment Number** | **Calibration Expire** |
-|------------------------------|----------------------|------------------------|
-| Autoclave                    | ACME-001             | 2025-03-09             |           |
-| CO2 Incubator                 | BUGS-006             | 2025-03-09             |
-| Inverted microscope           | DAFFY-007            | 2025-06-15           
+| **Equipment Name**  | **Equipment Number** | **Calibration Expire** |
+|---------------------|----------------------|------------------------|
+| Autoclave           | ACME-001             | 2025-03-09             |
+| CO2 Incubator       | BUGS-006             | 2025-03-09             |
+| Inverted microscope | DAFFY-007            | 2025-06-15             |
 
 ### Reagents
 
-| **Reagent Name**                                   | **Manufacturer**            | **Part Number**     | **Lot Number**               | **Expiration Date**     |
-|----------------------------------------------------|-----------------------------|---------------------|------------------------------|-------------------------|
-| Fetal Bovine Serum (FBS)                           | Wile E. Biotech Industries   | FBS-002              | `r params$lot_fbs`            | `r params$exp_fbs`       |
-| MEM Medium                                         | Road Runner Labs             | MEM-003              | `r params$lot_mem`            | `r params$exp_mem`       |
-| Trypsin                                            | Bugs Bunny Pharmaceuticals   | TRYPSIN-004          | `r params$lot_trypsin`        | `r params$exp_trypsin`   |
-| Penicillin/Streptomycin                            | Daffy Duck Labs              | PENSTREP-005         | `r params$lot_penstrep`       | `r params$exp_penstrep`  |
-| PBS (Phosphate-buffered saline)                    | Tweety Solutions             | PBS-006              | `r params$lot_pbs`            | `r params$exp_pbs`       |
-| Isopropanol (99.9%)                                | ACME Industrial Reagents     | ISO-007              | `r params$lot_isopropanol`    | `r params$exp_isopropanol`|
+| **Reagent Name**                | **Manufacturer**           | **Part Number** | **Lot Number**             | **Expiration Date**        |
+|-------------------|--------------|--------------|--------------|--------------|
+| Fetal Bovine Serum (FBS)        | Wile E. Biotech Industries | FBS-002         | `r params$lot_fbs`         | `r params$exp_fbs`         |
+| MEM Medium                      | Road Runner Labs           | MEM-003         | `r params$lot_mem`         | `r params$exp_mem`         |
+| Trypsin                         | Bugs Bunny Pharmaceuticals | TRYPSIN-004     | `r params$lot_trypsin`     | `r params$exp_trypsin`     |
+| Penicillin/Streptomycin         | Daffy Duck Labs            | PENSTREP-005    | `r params$lot_penstrep`    | `r params$exp_penstrep`    |
+| PBS (Phosphate-buffered saline) | Tweety Solutions           | PBS-006         | `r params$lot_pbs`         | `r params$exp_pbs`         |
+| Isopropanol (99.9%)             | ACME Industrial Reagents   | ISO-007         | `r params$lot_isopropanol` | `r params$exp_isopropanol` |
 
+## Identification of Test System
 
-## Identification of Test System 
-L929 mouse fibroblast cells obtained from ATCC (American Type Culture Collection), USA. 
+L929 mouse fibroblast cells obtained from ATCC (American Type Culture
+Collection), USA.
 
-## Justification of Test System and Route of Administration 
-Historically, mouse fibroblast L929 cells have been used for cytotoxicity studies because they demonstrate sensitivity to extractable cytotoxic articles. The test article was extracted and administered in vitro to mouse fibroblast L929 cells through a solvent compatible with the test system. This was the optimal route of administration available in this test system as recommended in the guidelines. 
+## Justification of Test System and Route of Administration
+
+Historically, mouse fibroblast L929 cells have been used for
+cytotoxicity studies because they demonstrate sensitivity to extractable
+cytotoxic articles. The test article was extracted and administered in
+vitro to mouse fibroblast L929 cells through a solvent compatible with
+the test system. This was the optimal route of administration available
+in this test system as recommended in the guidelines.
 
 ```{r, results="asis", echo=FALSE}
 if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
 
@@ -502,14 +510,13 @@ The extraction process was carried out at an extraction ratio of
 conditions, samples were extracted with continuous agitation in closed,
 inert containers, using **DMEM medium with 10% fetal bovine serum
 (FBS)** as the extraction solvent.
-
+<br>
 | **Sample**       | **Extract Volume (mL)**        | **Appearance of Extract**              |
 |--------------------|-------------------------|---------------------------|
 | Test Article     | `r params$test_extract_volume` | `r params$test_extract_appearance`     |
 | Negative Control | `r params$test_extract_volume` | `r params$negative_extract_appearance` |
 | Positive Control | `r params$test_extract_volume` | `r params$positive_extract_appearance` |
 | Blank Control    | `r params$test_extract_volume` | `r params$blank_extract_appearance`    |
-
 
 ## Experimental Procedure
 
@@ -520,11 +527,12 @@ controls for approximately 48 hours.
 
 ### Evaluation Criteria
 
-Morphological assessment of cytotoxicity was based on the following
-grading system:
+Morphological assessment of cytotoxicity was based on the following grading system:
+
+<br>
 
 | **Grade**        | **Criteria**                                                                     |
-|--------------------|----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | **0 - None**     | No cell lysis observed; cells remained attached, with intracytoplasmic granules. |
 | **1 - Slight**   | ≤ 20% rounding of cells, with occasional lysed cells observed.                   |
 | **2 - Mild**     | \> 20% to ≤ 50% rounding, with no extensive cell lysis.                          |
@@ -533,33 +541,34 @@ grading system:
 
 ### Statistical Method
 
-The mode of three replicates will be calculated to evaluate cytotoxic potential.
+The mode of three replicates will be calculated to evaluate cytotoxic
+potential.
 
 ```{r, results="asis", echo=FALSE}
 if (knitr::is_latex_output()) {
   cat("\\newpage")
 } else if (knitr::is_html_output()) {
   cat('<div style="page-break-after: always;"></div>')
-} else if (knitr::pandoc_to("docx")) {
-  cat('<w:br />')
+} else {
+  cat("\\pagebreak ")
 }
 ```
-## Results
 
+## Results
 
 ### Pre-Extraction Observations
 
-| **Observation**      | **Details**                                               |
-|----------------------|-----------------------------------------------------------|
-| Pre-Extraction        | `r params$pre_extraction_observations`                    |
+| **Observation** | **Details**                            |
+|-----------------|----------------------------------------|
+| Pre-Extraction  | `r params$pre_extraction_observations` |
 
 ### Post-Extraction Observations
 
-| **Sample**           | **Post-Extraction Observation**                            |
-|----------------------|-----------------------------------------------------------|
-| Test Article         | `r params$post_test_article`                               |
-| Negative Control     | `r params$post_negative_control`                           |
-| Positive Control     | `r params$post_positive_control`                           |
+| **Sample**       | **Post-Extraction Observation**  |
+|------------------|----------------------------------|
+| Test Article     | `r params$post_test_article`     |
+| Negative Control | `r params$post_negative_control` |
+| Positive Control | `r params$post_positive_control` |
 
 **General Observations**
 
@@ -567,16 +576,22 @@ if (knitr::is_latex_output()) {
 
 **Post-Extraction Observation**
 
-- **Test Article**: No significant color changes were observed, and the extract remained clear.
-- **Negative Control**: No significant color changes were observed, and the extract remained clear.
-- **Positive Control**: The extract became cloudy, and filtration was required before use.
+-   **Test Article**: No significant color changes were observed, and
+    the extract remained clear.
+-   **Negative Control**: No significant color changes were observed,
+    and the extract remained clear.
+-   **Positive Control**: The extract became cloudy, and filtration was
+    required before use.
 
-No pH adjustments, centrifugation, or dilution processes were performed on the test and control samples.
+No pH adjustments, centrifugation, or dilution processes were performed
+on the test and control samples.
 
 ### Morphological Scoring
 
 Each sample was tested in triplicate. The table below shows the results
 of the qualitative assessment of cytotoxicity:
+
+<br>
 
 | **Sample**       | **Replicate 1**                      | **Replicate 2**                      | **Replicate 3**                      | **Modal Score**                      |
 |---------------|---------------|---------------|---------------|---------------|
@@ -606,9 +621,7 @@ The confidentiality of all data and study-related materials has been
 maintained as per the confidentiality agreement established prior to the
 initiation of the study.
 
-
 ## Deviation Statement
 
 There were no deviations from the approved study protocol that would
 impact the validity or integrity of the data.
-
